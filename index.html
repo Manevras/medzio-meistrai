@@ -417,6 +417,51 @@
             transform: scale(1.02);
         }
 
+        /* ===== REVIEWS ===== */
+        .review-card {
+            padding: 1.6rem;
+            border: 1px solid rgba(61,43,31,0.08);
+            background: var(--cream);
+            transition: border-color 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .review-card:hover {
+            border-color: rgba(176,141,87,0.35);
+            transform: translateY(-3px);
+        }
+        .review-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: rgba(27,20,13,0.75);
+            line-height: 1.7;
+            margin: 0;
+            flex: 1;
+        }
+        .review-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(61,43,31,0.06);
+            padding-top: 0.8rem;
+        }
+        .review-name {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+        }
+        .review-date {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.65rem;
+            color: rgba(61,43,31,0.35);
+            letter-spacing: 0.08em;
+        }
+
         /* ===== FOOTER ===== */
         footer {
             padding: 2.5rem 1.5rem;
@@ -565,6 +610,90 @@
         <p style="font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:rgba(27,20,13,0.5); text-align:center; margin-top:1.2rem;">
             Meistrystė, kurią jaučia medis.
         </p>
+    </div>
+</section>
+
+<!-- ======== REVIEWS SECTION ======== -->
+<section id="atsiliepimai" style="padding: 2.5rem 1.5rem; background: var(--cream);">
+    <div style="max-width:1100px; margin:0 auto;">
+        <div style="text-align:center; margin-bottom:2rem;">
+            <h3 class="section-title">Klientų atsiliepimai</h3>
+            <div class="gold-divider"></div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.2rem;">
+
+            <div class="review-card">
+                <p class="review-text">"Puiki patirtis, puikus meistras. Grindys tapo kaip naujos, o kaina tikrai gera. Meistras malonus, sukalbamas, konkretus."</p>
+                <div class="review-meta"><span class="review-name">Jurga</span><span class="review-date">2018</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Kokybiškas darbas. Greitai ir gražiai."</p>
+                <div class="review-meta"><span class="review-name">Elena</span><span class="review-date">2018</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Gerai nušlifavo ir nulakavo parketo grindis. Ateityje dėl likusių kambarių irgi kreipsimės pas šį meistrą."</p>
+                <div class="review-meta"><span class="review-name">Šarūnas</span><span class="review-date">2018</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Darbas atliktas net greičiau nei buvo sutarta. Rezultatas puikus. Rekomenduoju!"</p>
+                <div class="review-meta"><span class="review-name">Rytis</span><span class="review-date">2018</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Gerai ir greitai sutvarkė senas medines grindis."</p>
+                <div class="review-meta"><span class="review-name">Tomas</span><span class="review-date">2018</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Darbą atliko gerai. Greitai. Pigiai."</p>
+                <div class="review-meta"><span class="review-name">Valerijus</span><span class="review-date">2018</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Patikimas meistras, dirba labai kokybiškai."</p>
+                <div class="review-meta"><span class="review-name">Virginijus</span><span class="review-date">2019</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Labai profesionalus ir atsakingas meistras. Grindys po atnaujinimo atrodo tiesiog nuostabiai – rezultatas viršijo lūkesčius. Labai rekomenduoju!"</p>
+                <div class="review-meta"><span class="review-name">Loreta</span><span class="review-date">2019</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Labai noriu padėkoti už profesionalų ir nuoširdų darbą. Projektas buvo skubus – viskas padaryta laiku. Rezultatas puikus."</p>
+                <div class="review-meta"><span class="review-name">Laurynas</span><span class="review-date">2019</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Vilniaus rotušės administracija dėkoja meistrui Nojui Ambrazevičiui už laiku ir kokybiškai atliktus medinių grindų šlifavimo ir lakavimo darbus."</p>
+                <div class="review-meta"><span class="review-name">VšĮ Vilniaus rotušė</span><span class="review-date">2020</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Aukštos klasės profesionalas, dirba labai kokybiškai ir greitai, laikosi susitarimų. Tikrai neprašausite."</p>
+                <div class="review-meta"><span class="review-name">Irma Bakševičienė</span><span class="review-date">2022</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Kokybiškai, skrupulingai atliktas darbas, malonus bei profesionalus bendravimas. Likome patenkinti ir galime drąsiai rekomenduoti!"</p>
+                <div class="review-meta"><span class="review-name">Viešbutis Courtyard by Marriott Vilnius</span><span class="review-date">2024</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Didelis ačiū už greitai ir gerai padarytas grindis. Viską pilnai paaiškino, parekomendavo. Savo srities specialistas."</p>
+                <div class="review-meta"><span class="review-name">Ramūnas</span><span class="review-date">2024</span></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Rekomenduoju drąsiai. Rezultatas viršijo lūkesčius. Viskas konkrečiai, greitai, kokybiškai, tvarkingai."</p>
+                <div class="review-meta"><span class="review-name">Agnė</span><span class="review-date">2025</span></div>
+            </div>
+
+        </div>
     </div>
 </section>
 
