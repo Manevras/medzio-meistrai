@@ -1,0 +1,7 @@
+GIF/VIDEO ČIONAI (assets/videos/)
+
+Įkelk:
+- restoration-animation.gif    (GIF animacija, max 10MB)
+- restoration-animation.mp4    (MP4 alternatyva, rekomenduojama)
+
+Optimizuok GIF: https://ezgif.com/optimize

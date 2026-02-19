@@ -1,0 +1,10 @@
+NUOTRAUKOS ČIONAI (assets/images/)
+
+Įkelk šiuos failus:
+- hero-default.jpg      (Hero nuotrauka, rekomenduojama: 1920x1080px)
+- about-default.jpg     (About nuotrauka, rekomenduojama: 800x1000px)
+- project-1.jpg         (Projektas 1, rekomenduojama: 800x800px)
+- project-2.jpg         (Projektas 2, rekomenduojama: 800x800px)
+- project-3.jpg         (Projektas 3, rekomenduojama: 800x800px)
+
+Optimizuok nuotraukas prieš įkeldamas: https://tinypng.com

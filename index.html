@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medžio Meistrai - Profesionalus grindų, parketo ir baldų restauravimas visoje Lietuvoje. Daugiau nei 20 metų patirties.">
+    <meta name="keywords" content="grindų restauravimas, parketo šlifavimas, baldų atnaujinimas, medinės grindys, Lietuva">
+    
+    <title>Medžio Meistrai | Profesionalus Grindų ir Parketo Restauravimas</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cream':    '#fdfbf7',
+                        'chocolate':'#3d2b1f',
+                        'charcoal': '#1b140d',
+                        'gold':     '#b08d57',
+                        'gold-light':'#d4b483',
+                        'warm-gray':'#8c7b6e',
+                    },
+                    fontFamily: {
+                        'display': ['"Playfair Display"', 'serif'],
+                        'body':    ['"Work Sans"', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        :root {
+            --cream: #fdfbf7;
+            --chocolate: #3d2b1f;
+            --charcoal: #1b140d;
+            --gold: #b08d57;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--cream);
+            color: var(--charcoal);
+            font-family: 'Work Sans', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* ===== HEADER ===== */
+        #main-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(253,251,247,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(61,43,31,0.06);
+            transition: box-shadow 0.3s;
+        }
+        #main-header.scrolled {
+            box-shadow: 0 2px 24px rgba(61,43,31,0.06);
+        }
+
+        /* ===== HERO ===== */
+        #pradzia {
+            padding: 1rem 1.5rem 1.5rem;
+        }
+        .hero-frame {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid rgba(61,43,31,0.15);
+        }
+        .hero-inner {
+            position: relative;
+            width: 100%;
+            height: 55vh;
+            max-height: 520px;
+            overflow: hidden;
+        }
+        .hero-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .hero-inner:hover img {
+            transform: scale(1.03);
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 100%);
+        }
+        .hero-text {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: clamp(2.2rem, 6vw, 5rem);
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            animation: fadeUp 1.2s ease both;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== ABOUT – horizontal layout ===== */
+        #apie {
+            padding: 2.5rem 1.5rem;
+        }
+        .about-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        .about-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .about-img-wrap::before {
+            content: '';
+            position: absolute;
+            top: -12px; left: -12px;
+            right: 12px; bottom: 12px;
+            border: 1px solid rgba(176,141,87,0.3);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .about-img-wrap img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            filter: grayscale(20%) sepia(10%);
+            transition: filter 0.7s ease;
+        }
+        .about-img-wrap:hover img {
+            filter: grayscale(0%) sepia(0%);
+        }
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .about-label {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+        }
+        .about-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            color: var(--charcoal);
+            line-height: 1.1;
+        }
+        .about-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: rgba(61,43,31,0.8);
+            line-height: 1.7;
+            border-left: 2px solid var(--gold);
+            padding-left: 1.2rem;
+        }
+        .about-body {
+            font-size: 0.95rem;
+            color: rgba(27,20,13,0.65);
+            line-height: 1.85;
+            font-weight: 300;
+        }
+
+        /* Read More button */
+        .btn-outline {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 1px solid var(--chocolate);
+            color: var(--chocolate);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: var(--chocolate);
+            color: var(--cream);
+            transform: scale(1.03);
+        }
+
+        #extended-content {
+            display: none;
+        }
+        #extended-content.open {
+            display: block;
+        }
+
+        /* ===== SERVICES GRID ===== */
+        #paslaugos {
+            padding: 2.5rem 1.5rem;
+            background: rgba(61,43,31,0.02);
+        }
+        .services-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .services-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 900px) {
+            .services-cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .services-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        .service-card {
+            position: relative;
+            padding: 1.8rem 1.4rem;
+            border: 1px solid rgba(61,43,31,0.1);
+            background: var(--cream);
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(176,141,87,0.07) 0%, rgba(253,251,247,0) 60%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .service-card:hover {
+            border-color: rgba(176,141,87,0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(61,43,31,0.08);
+        }
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        .service-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+            display: block;
+            font-family: 'Material Symbols Outlined';
+            font-weight: 200;
+        }
+        .service-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--charcoal);
+            line-height: 1.3;
+            margin-bottom: 0.6rem;
+        }
+        .service-desc {
+            font-size: 0.8rem;
+            color: rgba(61,43,31,0.55);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .service-arrow {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            font-size: 1rem;
+            color: rgba(176,141,87,0);
+            font-family: 'Material Symbols Outlined';
+            transition: color 0.3s, transform 0.3s;
+        }
+        .service-card:hover .service-arrow {
+            color: var(--gold);
+            transform: translate(3px, -3px);
+        }
+
+
+
+        /* ===== DIVIDER ===== */
+        .gold-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.4;
+            margin: 1rem auto 0;
+        }
+
+        /* ===== SECTION TITLE ===== */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 400;
+            color: var(--charcoal);
+        }
+
+        /* ===== CONTACTS ===== */
+        #kontaktai {
+            padding: 2.5rem 1.5rem 3rem;
+            background: var(--cream);
+        }
+        .contact-wrap {
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-top: 1.5rem;
+        }
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--charcoal);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+            font-weight: 300;
+        }
+        .contact-link:hover {
+            color: var(--gold);
+        }
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-size: inherit;
+            line-height: 1;
+        }
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            width: 100%;
+            padding: 1.1rem;
+            background: var(--charcoal);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn-primary:hover {
+            background: var(--gold);
+            transform: scale(1.02);
+        }
+        .btn-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            width: 100%;
+            padding: 1.1rem;
+            border: 2px solid var(--charcoal);
+            color: var(--charcoal);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+        }
+        .btn-secondary:hover {
+            background: var(--charcoal);
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 2.5rem 1.5rem;
+            border-top: 1px solid rgba(61,43,31,0.06);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ======== STICKY HEADER ======== -->
+<header id="main-header">
+    <div style="display:flex; align-items:center; justify-content:center; padding:1.3rem 1.5rem;">
+        <a href="#pradzia" style="text-decoration:none;">
+            <h1 style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; letter-spacing:0.3em; font-weight:300; color:var(--charcoal); text-transform:uppercase; transition:color 0.3s; margin:0;"
+                onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--charcoal)'">
+                Medžio Meistrai
+            </h1>
+        </a>
+    </div>
+</header>
+
+<!-- ======== HERO SECTION ======== -->
+<section id="pradzia">
+    <div class="hero-frame">
+        <div class="hero-inner">
+            <!-- 🖼️ KEISK HERO NUOTRAUKĄ: pakeisk src žemiau -->
+            <img
+                src="assets/images/hero-default.jpg"
+                alt="Medžio Meistrai – Profesionalus grindų restauravimas"
+                loading="eager"
+            />
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h2>Sugrąžiname medžiui<br>jo tikrąją vertę.</h2>
+            </div>
+        </div>
+    </div>
+    <div style="display:flex; justify-content:center; margin-top:1.2rem;">
+        <div class="gold-divider"></div>
+    </div>
+</section>
+
+<!-- ======== ABOUT SECTION ======== -->
+<section id="apie">
+    <div class="about-grid">
+        <!-- LEFT: Image -->
+        <div class="about-img-wrap">
+            <!-- 🖼️ KEISK ABOUT NUOTRAUKĄ: pakeisk src žemiau -->
+            <img
+                src="assets/images/about-default.jpg"
+                alt="Medžio restauravimo procesas"
+                loading="lazy"
+            />
+        </div>
+        <!-- RIGHT: Text -->
+        <div class="about-content">
+            <span class="about-label">Mūsų istorija</span>
+            <h3 class="about-title">Patirtis,<br>kuri kalba pati.</h3>
+            <p class="about-quote">
+                "Kiekvienas rėžis, kiekviena faktūra pasakoja savo istoriją. Mes esame čia, kad tą istoriją išsaugotume ateities kartoms."
+            </p>
+            <p class="about-body">
+                Mūsų studija gimė iš paprastos, bet tvirtos idėjos – medžiui reikia ne tik meistriškų rankų, bet ir supratimo. Medis yra gyva, kvėpuojanti medžiaga, kuri sugeria namų tylą, vaikų juoką, kasdienybės ritmą.
+            </p>
+
+            <!-- Extended content -->
+            <div id="extended-content">
+                <p class="about-body" style="margin-bottom:1rem;">
+                    Daugiau nei du dešimtmečius dirbame su medinių grindų, laiptų ir baldų atnaujinimu visoje Lietuvoje. Esame šeimos verslas, kuriame patirtis perduodama kartu su vertybėmis – atsakomybe, kruopštumu ir pagarba kiekvienai detalei.
+                </p>
+                <p class="about-body" style="margin-bottom:1rem;">
+                    Tinkamai parinktos medžiagos, profesionali įranga ir kantrus rankų darbas leidžia pasiekti ilgaamžį efektą. Mums svarbu, kad atnaujintas paviršius ne tik atrodytų estetiškai, bet ir išliktų patvarus daugelį metų. Todėl kiekvieną projektą vertiname individualiai.
+                </p>
+                <p class="about-body">
+                    Tai pasitikėjimas, kurį pelnėme nuosekliu darbu ir sąžiningu požiūriu. Jei ieškote patikimų meistrų, kurie dirba atsakingai ir su meile savo amatui, būsime pasiruošę pasirūpinti ir jūsų namų istorijos tąsa.
+                </p>
+            </div>
+
+            <button class="btn-outline" id="read-more-btn">Skaityti daugiau</button>
+        </div>
+    </div>
+</section>
+
+<!-- ======== SERVICES SECTION ======== -->
+<section id="paslaugos">
+    <div class="services-grid">
+        <div style="text-align:center;">
+            <h3 class="section-title">Paslaugos</h3>
+            <div class="gold-divider"></div>
+        </div>
+        <div class="services-cards">
+
+            <!-- Card 1 -->
+            <a href="#kontaktai" class="service-card smooth-scroll">
+                <span class="service-icon">park</span>
+                <p class="service-name">Parketo restauravimas</p>
+                <p class="service-desc">Šlifavimas, lakavimas ir senų grindų atgaivinimas iki pirminės grožybės.</p>
+                <span class="service-arrow">north_east</span>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="#kontaktai" class="service-card smooth-scroll">
+                <span class="service-icon">chair</span>
+                <p class="service-name">Baldų atnaujinimas</p>
+                <p class="service-desc">Seni baldai įgauna naują gyvenimą – kruopštus valymas, dažymas, poliravimas.</p>
+                <span class="service-arrow">north_east</span>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="#kontaktai" class="service-card smooth-scroll">
+                <span class="service-icon">roofing</span>
+                <p class="service-name">Medinių lubų priežiūra</p>
+                <p class="service-desc">Lubų medžio apsauga ir atnaujinimas – ilgaamžis rezultatas bet kokiai patalpai.</p>
+                <span class="service-arrow">north_east</span>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="#kontaktai" class="service-card smooth-scroll">
+                <span class="service-icon">design_services</span>
+                <p class="service-name">Individualūs projektai</p>
+                <p class="service-desc">Unikalūs sprendimai pagal jūsų poreikius – nuo konsultacijos iki galutinio rezultato.</p>
+                <span class="service-arrow">north_east</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ======== GIF / VIDEO SECTION ======== -->
+<section id="animacija" style="padding: 2.5rem 1.5rem; background: rgba(61,43,31,0.02);">
+    <div style="max-width:1100px; margin:0 auto;">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+            <h3 class="section-title">Meistrystė veikime</h3>
+            <div class="gold-divider"></div>
+        </div>
+        <!-- 🎬 KEISK VIDEO: pakeisk src į savo MP4 failą -->
+        <div style="position:relative; width:100%; max-height:420px; overflow:hidden; border:1px solid rgba(61,43,31,0.12);">
+            <video autoplay loop muted playsinline style="width:100%; max-height:420px; object-fit:cover; display:block;">
+                <source src="assets/videos/restoration-animation.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p style="font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:rgba(27,20,13,0.5); text-align:center; margin-top:1.2rem;">
+            Meistrystė, kurią jaučia medis.
+        </p>
+    </div>
+</section>
+
+<!-- ======== CONTACTS SECTION ======== -->
+<section id="kontaktai">
+    <div class="contact-wrap">
+        <span class="about-label">Susisiekite su mumis</span>
+        <h4 class="section-title" style="margin-top:0.5rem;">Pradėkime<br>pokalbį.</h4>
+        <div class="gold-divider" style="margin-bottom:2.5rem;"></div>
+
+        <div style="display:flex; flex-direction:column; gap:0.8rem; margin-bottom:2.5rem;">
+            <div>
+                <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(61,43,31,0.4); margin:0 0 0.2rem;">Meistras</p>
+                <!-- ✏️ KEISK VARDĄ -->
+                <p class="contact-name">Nojus</p>
+            </div>
+
+            <!-- ✏️ KEISK TELEFONĄ -->
+            <a href="tel:+37060534774" class="contact-link" style="justify-content:center;">
+                <span class="material-symbols-outlined" style="font-size:1.2rem;">call</span>
+                +370 605 34774
+            </a>
+
+            <!-- ✏️ KEISK EMAIL -->
+            <a href="mailto:medzio.meistrai.paslaugos@gmail.com" class="contact-link" style="justify-content:center; font-size:0.9rem;">
+                <span class="material-symbols-outlined" style="font-size:1.2rem;">mail</span>
+                medzio.meistrai.paslaugos@gmail.com
+            </a>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:0.8rem;">
+            <!-- ✏️ KEISK TELEFONĄ IR ŽEMIAU -->
+            <a href="tel:+37060534774" class="btn-primary">
+                <span class="material-symbols-outlined" style="font-size:1.1rem;">call</span>
+                Skambinti dabar
+            </a>
+            <a href="mailto:medzio.meistrai.paslaugos@gmail.com" class="btn-secondary">
+                <span class="material-symbols-outlined" style="font-size:1.1rem;">mail</span>
+                Rašyti laišką
+            </a>
+            <p style="font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(61,43,31,0.35); text-align:center; padding-top:0.3rem;">
+                Konsultuojame visoje Lietuvoje
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer>
+    <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1rem; color:rgba(27,20,13,0.45); margin:0 0 0.5rem;">
+        Meistrystė, perduodama iš kartos į kartą.
+    </p>
+    <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(61,43,31,0.25); margin:0;">
+        © 2024 Medžio Meistrai
+    </p>
+</footer>
+
+<!-- ======== JAVASCRIPT ======== -->
+<script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"], .smooth-scroll').forEach(el => {
+        el.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Header shadow on scroll
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+    }, { passive: true });
+
+    // Read More toggle
+    const btn = document.getElementById('read-more-btn');
+    const ext = document.getElementById('extended-content');
+    if (btn && ext) {
+        btn.addEventListener('click', () => {
+            const isOpen = ext.classList.toggle('open');
+            btn.textContent = isOpen ? 'Skaityti mažiau' : 'Skaityti daugiau';
+        });
+    }
+
+    // Lazy loading images (IntersectionObserver)
+    if ('IntersectionObserver' in window) {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        const imgObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) img.src = img.dataset.src;
+                    imgObserver.unobserve(img);
+                }
+            });
+        }, { rootMargin: '200px' });
+        lazyImages.forEach(img => imgObserver.observe(img));
+    }
+</script>
+
+</body>
+</html>
