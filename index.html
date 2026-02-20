@@ -438,7 +438,44 @@
         }
 
         /* Rating Summary */
-        
+        .rating-summary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .rating-big {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+        .rating-stars-big {
+            display: flex;
+            gap: 3px;
+        }
+        .rating-stars-big .star-icon {
+            color: var(--gold);
+            font-size: 1.4rem;
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings: 'FILL' 1;
+        }
+        .rating-count {
+            font-size: 0.72rem;
+            color: rgba(61,43,31,0.45);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.3rem;
+        }
+        .rating-divider-v {
+            width: 1px;
+            height: 50px;
+            background: rgba(61,43,31,0.1);
+        }
+        @media (max-width: 500px) { .rating-divider-v { display: none; } }
 
         /* Reviews Grid */
         .reviews-grid {
@@ -493,6 +530,21 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             margin-top: 0.1rem;
+        }
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 0.8rem;
+        }
+        .review-stars .star-icon {
+            font-family: 'Material Symbols Outlined';
+            font-size: 1rem;
+            font-variation-settings: 'FILL' 1;
+            color: var(--gold);
+        }
+        .review-stars .star-icon.empty {
+            color: rgba(61,43,31,0.15);
+            font-variation-settings: 'FILL' 0;
         }
         .review-text {
             font-size: 0.88rem;
@@ -696,7 +748,30 @@
         }
         .field-error-msg.show { display: block; }
 
-        
+        /* Star rating input */
+        .star-input {
+            display: flex;
+            gap: 4px;
+            margin-top: 0.2rem;
+        }
+        .star-input button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-family: 'Material Symbols Outlined';
+            font-size: 1.8rem;
+            color: rgba(61,43,31,0.15);
+            font-variation-settings: 'FILL' 0;
+            transition: color 0.15s, transform 0.15s;
+            line-height: 1;
+        }
+        .star-input button:hover,
+        .star-input button.active {
+            color: var(--gold);
+            font-variation-settings: 'FILL' 1;
+            transform: scale(1.15);
+        }
 
         /* Spam honeypot */
         .hp-field { display: none !important; }
@@ -884,7 +959,20 @@
             <div class="gold-divider"></div>
         </div>
 
-        
+        <!-- Rating Summary -->
+        <div class="rating-summary">
+            <div style="text-align:center;">
+                <div class="rating-big" id="avg-rating-display">4.9</div>
+                <div class="rating-stars-big" id="avg-stars-display">
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                </div>
+                <div class="rating-count" id="review-count-display">5 atsiliepimai</div>
+            </div>
+            <div class="rating-divider-v"></div>
             <div style="text-align:center;">
                 <button class="btn-review" onclick="openReviewModal()">
                     <span class="material-symbols-outlined" style="font-size:1rem;">rate_review</span>
@@ -895,7 +983,107 @@
 
         <!-- Reviews Grid -->
         <div class="reviews-grid" id="reviews-grid">
-            <!-- Reviews will be rendered by JS -->
+
+            <!-- ATSILIEPIMAS 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">R</div>
+                    <div>
+                        <div class="review-name">R&#363;ta &Scaron;.</div>
+                        <div class="review-date">2025 m. kovo 12 d.</div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                </div>
+                <p class="review-text">Nojus atliko parketo &scaron;lifavim&#261; puikiausiai. Grindys atrodo kaip naujos &ndash; netik&#279;jau, kad &iacute;manoma pasiekti tok&#303; rezultat&#261;. Tikrai rekomenduosiu draugams ir artimiesiems.</p>
+                <div class="review-verified"><span class="material-symbols-outlined">verified</span> Patvirtintas atsiliepimas</div>
+            </div>
+
+            <!-- ATSILIEPIMAS 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">T</div>
+                    <div>
+                        <div class="review-name">Tomas V.</div>
+                        <div class="review-date">2025 m. vasario 28 d.</div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                </div>
+                <p class="review-text">Profesionalus, punktualus ir tikslus darbas. Baig&#279; visk&#261; per sutar t&#261; laik&#261;, tvarka buvo palaikoma per vis&#261; proces&#261;. Grindys atrodo fantasti&scaron;kai.</p>
+                <div class="review-verified"><span class="material-symbols-outlined">verified</span> Patvirtintas atsiliepimas</div>
+            </div>
+
+            <!-- ATSILIEPIMAS 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">A</div>
+                    <div>
+                        <div class="review-name">Agn&#279; M.</div>
+                        <div class="review-date">2025 m. sausio 15 d.</div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                </div>
+                <p class="review-text">Seni parketiniai laiptai po restauravimo atrodo tiesiog nuostabiai. Labai d&#279;kinga u&#382; kantrybe ir d&#279;mes&#303; detal&#279;ms. Med&#382;io Meistrai &ndash; tikri profesionalai.</p>
+                <div class="review-verified"><span class="material-symbols-outlined">verified</span> Patvirtintas atsiliepimas</div>
+            </div>
+
+            <!-- ATSILIEPIMAS 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">M</div>
+                    <div>
+                        <div class="review-name">Mindaugas K.</div>
+                        <div class="review-date">2024 m. gruod&#382;io 20 d.</div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined empty">star</span>
+                </div>
+                <p class="review-text">Geras darbas, greitas atsakymas &#301; skambu&#269;ius. Kaina atitiko kokyb&#281;. Tikrai naudosiuosi paslaugomis dar kart&#261;.</p>
+                <div class="review-verified"><span class="material-symbols-outlined">verified</span> Patvirtintas atsiliepimas</div>
+            </div>
+
+            <!-- ATSILIEPIMAS 5 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">L</div>
+                    <div>
+                        <div class="review-name">Laura B.</div>
+                        <div class="review-date">2024 m. lapkri&#269;io 5 d.</div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                </div>
+                <p class="review-text">Senos &#261;&#382;uolin&#279;s grindys atgavo pirmyk&scaron;t&#281; &scaron;lov&#281;! Buvo tikrai &#303;sp&#363;dinga matyti transformacij&#261;. Nojus dirba su &scaron;irdimi &ndash; tai jau&#269;iasi.</p>
+                <div class="review-verified"><span class="material-symbols-outlined">verified</span> Patvirtintas atsiliepimas</div>
+            </div>
+
         </div>
 
         <!-- Admin Panel (hidden, activated by Ctrl+Shift+A) -->
@@ -917,15 +1105,15 @@
         <div style="display:flex; flex-direction:column; gap:0.8rem; margin-bottom:2.5rem;">
             <div>
                 <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(61,43,31,0.4); margin:0 0 0.2rem;">Meistras</p>
-                <p class="contact-name">Jaunius</p>
+                <p class="contact-name">Nojus</p>
             </div>
             <a href="tel:+37060534774" class="contact-link" style="justify-content:center;">
                 <span class="material-symbols-outlined" style="font-size:1.2rem;">call</span>
                 +370 605 34774
             </a>
-            <a href="/cdn-cgi/l/email-protection#f69b93928c9f99d89b939f858284979fd88697859a9783919985b6919b979f9ad895999b" class="contact-link" style="justify-content:center; font-size:0.9rem;">
+            <a href="mailto:medzio.meistrai.paslaugos@gmail.com" class="contact-link" style="justify-content:center; font-size:0.9rem;">
                 <span class="material-symbols-outlined" style="font-size:1.2rem;">mail</span>
-                <span class="__cf_email__" data-cfemail="f8959d9c829197d6959d918b8c8a9991d688998b94998d9f978bb89f95999194d69b9795">[email&#160;protected]</span>
+                medzio.meistrai.paslaugos@gmail.com
             </a>
         </div>
 
@@ -934,7 +1122,7 @@
                 <span class="material-symbols-outlined" style="font-size:1.1rem;">call</span>
                 Skambinti dabar
             </a>
-            <a href="/cdn-cgi/l/email-protection#5c313938263533723139352f282e3d35722c3d2f303d293b332f1c3b313d3530723f3331" class="btn-secondary">
+            <a href="mailto:medzio.meistrai.paslaugos@gmail.com" class="btn-secondary">
                 <span class="material-symbols-outlined" style="font-size:1.1rem;">mail</span>
                 Rašyti laišką
             </a>
@@ -982,6 +1170,19 @@
                     <label for="r-email">El. paštas * <span style="font-size:0.55rem; opacity:0.6;">(nebus rodomas viešai)</span></label>
                     <input type="email" id="r-email" placeholder="jusu@email.com" maxlength="100">
                     <p class="field-error-msg" id="err-email">Įveskite galiojantį el. paštą</p>
+                </div>
+
+                <!-- Star Rating -->
+                <div class="modal-field">
+                    <label>Įvertinimas *</label>
+                    <div class="star-input" id="star-input" role="group" aria-label="Žvaigždučių įvertinimas">
+                        <button type="button" data-val="1" aria-label="1 žvaigždutė">star</button>
+                        <button type="button" data-val="2" aria-label="2 žvaigždutės">star</button>
+                        <button type="button" data-val="3" aria-label="3 žvaigždutės">star</button>
+                        <button type="button" data-val="4" aria-label="4 žvaigždutės">star</button>
+                        <button type="button" data-val="5" aria-label="5 žvaigždutės">star</button>
+                    </div>
+                    <p class="field-error-msg" id="err-stars">Pasirinkite įvertinimą</p>
                 </div>
 
                 <!-- Review Text -->
@@ -1075,14 +1276,14 @@
             <span class="success-icon material-symbols-outlined">handshake</span>
             <p style="font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--charcoal); margin-bottom:0.5rem;">Puiku!</p>
             <p style="font-size:0.85rem; color:rgba(61,43,31,0.55); line-height:1.7;">
-                Jūsų užklausa gauta. Meistras Jaunius susisieks per 24 valandas su preliminariu kainos pasiūlymu.
+                Jūsų užklausa gauta. Meistras Nojus susisieks per 24 valandas su preliminariu kainos pasiūlymu.
             </p>
         </div>
     </div>
 </div>
 
 <!-- ======== JAVASCRIPT ======== -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ── Smooth scroll ──
 document.querySelectorAll('a[href^="#"], .smooth-scroll').forEach(el => {
     el.addEventListener('click', function(e) {
@@ -1140,13 +1341,15 @@ const DEFAULT_REVIEWS = [
     {
         id: 'seed1',
         name: 'Rūta Š.',
-        text: 'Jaunius atliko parketo šlifavimą puikiausiai. Grindys atrodo kaip naujos – netikėjau, kad įmanoma pasiekti tokį rezultatą. Tikrai rekomenduosiu draugams ir artimiesiems.',
+        stars: 5,
+        text: 'Nojus atliko parketo šlifavimą puikiausiai. Grindys atrodo kaip naujos – netikėjau, kad įmanoma pasiekti tokį rezultatą. Tikrai rekomenduosiu draugams ir artimiesiems.',
         date: '2025-03-12',
         approved: true
     },
     {
         id: 'seed2',
         name: 'Tomas V.',
+        stars: 5,
         text: 'Profesionalus, punktualus ir tikslus darbas. Baigė viską per sutartą laiką, tvarka buvo palaikoma per visą procesą. Grindys atrodo fantasitkšai.',
         date: '2025-02-28',
         approved: true
@@ -1154,6 +1357,7 @@ const DEFAULT_REVIEWS = [
     {
         id: 'seed3',
         name: 'Agnė M.',
+        stars: 5,
         text: 'Seni parketiniai laiptai po restauravimo atrodo tiesiog nuostabiai. Labai dėkinga už kantrybę ir detalių dėmesį. Medžio Meistrai – tikri profesionalai.',
         date: '2025-01-15',
         approved: true
@@ -1161,6 +1365,7 @@ const DEFAULT_REVIEWS = [
     {
         id: 'seed4',
         name: 'Mindaugas K.',
+        stars: 4,
         text: 'Geras darbas, greitas atsakymas į skambučius. Kaina atitiko kokybę. Tikrai naudosiuosi paslaugomis dar kartą.',
         date: '2024-12-20',
         approved: true
@@ -1168,7 +1373,8 @@ const DEFAULT_REVIEWS = [
     {
         id: 'seed5',
         name: 'Laura B.',
-        text: 'Senos ąžuolinės grindys atgavo pirmykštę šlovę! Buvo tikrai įspūdinga matyti transformaciją. Jaunius dirba su širdimi – tai jaučiasi.',
+        stars: 5,
+        text: 'Senos ąžuolinės grindys atgavo pirmykštę šlovę! Buvo tikrai įspūdinga matyti transformaciją. Nojus dirba su širdimi – tai jaučiasi.',
         date: '2024-11-05',
         approved: true
     }
@@ -1200,6 +1406,11 @@ function savePending(reviews) {
 }
 
 // ── Render reviews ──
+function renderStars(count, total = 5) {
+    let html = '<div class="review-stars">';
+    for (let i = 1; i <= total; i++) {
+        html += `<span class="star-icon material-symbols-outlined${i > count ? ' empty' : ''}">star</span>`;
+    }
     html += '</div>';
     return html;
 }
@@ -1221,6 +1432,7 @@ function renderReviewCard(review, isNew = false) {
                     <div class="review-date">${formatDate(review.date)}</div>
                 </div>
             </div>
+            ${renderStars(review.stars)}
             <p class="review-text">${escapeHtml(review.text)}</p>
             <div class="review-verified">
                 <span class="material-symbols-outlined">verified</span>
@@ -1230,11 +1442,33 @@ function renderReviewCard(review, isNew = false) {
     `;
 }
 
+function updateRatingSummary(reviews) {
+    if (!reviews.length) return;
+    const avg = reviews.reduce((s, r) => s + r.stars, 0) / reviews.length;
+    const rounded = Math.round(avg * 10) / 10;
+    document.getElementById('avg-rating-display').textContent = rounded.toFixed(1);
+    document.getElementById('review-count-display').textContent =
+        reviews.length + ' ' + (reviews.length === 1 ? 'atsiliepimas' : 'atsiliepimai');
+}
 
 function renderAllReviews() {
-    const approved = getApproved();
-    const grid = document.getElementById('reviews-grid');
-    grid.innerHTML = approved.map(r => renderReviewCard(r)).join('');
+    // Only inject localStorage-approved reviews (user-submitted) at the top.
+    // The 5 seed reviews are already hardcoded in HTML and always visible.
+    const stored = JSON.parse(localStorage.getItem(STORAGE_KEY_APPROVED) || '[]');
+    // Filter out seed reviews (they are hardcoded in HTML)
+    const userReviews = stored.filter(r => !r.id.startsWith('seed'));
+    if (userReviews.length > 0) {
+        const grid = document.getElementById('reviews-grid');
+        userReviews.forEach(r => {
+            grid.insertAdjacentHTML('afterbegin', renderReviewCard(r));
+        });
+    }
+    // Update summary count: 5 seeds + user approved
+    const totalCount = 5 + stored.filter(r => !r.id.startsWith('seed')).length;
+    const allStars = [...DEFAULT_REVIEWS.map(r => r.stars), ...stored.filter(r => !r.id.startsWith('seed')).map(r => r.stars)];
+    const avg = allStars.reduce((a, b) => a + b, 0) / allStars.length;
+    document.getElementById('avg-rating-display').textContent = avg.toFixed(1);
+    document.getElementById('review-count-display').textContent = totalCount + (totalCount === 1 ? ' atsiliepimas' : ' atsiliepimai');
 }
 
 // ── Escape HTML ──
@@ -1248,6 +1482,7 @@ function escapeHtml(str) {
 }
 
 // ── Review modal ──
+let selectedStars = 0;
 
 function openReviewModal() {
     document.getElementById('review-modal').classList.add('open');
@@ -1265,15 +1500,42 @@ document.getElementById('review-modal').addEventListener('click', function(e) {
 });
 
 function resetReviewForm() {
+    selectedStars = 0;
     document.getElementById('r-name').value = '';
     document.getElementById('r-email').value = '';
     document.getElementById('r-text').value = '';
+    document.querySelectorAll('#star-input button').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.field-error-msg').forEach(m => m.classList.remove('show'));
     document.querySelectorAll('.modal-field input, .modal-field textarea').forEach(f => f.classList.remove('error'));
     document.getElementById('modal-form-wrap').classList.remove('hide');
     document.getElementById('modal-success').classList.remove('show');
     document.getElementById('rate-msg').classList.remove('show');
 }
+
+// Star rating interaction
+document.querySelectorAll('#star-input button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        selectedStars = parseInt(btn.dataset.val);
+        document.querySelectorAll('#star-input button').forEach(b => {
+            b.classList.toggle('active', parseInt(b.dataset.val) <= selectedStars);
+        });
+        document.getElementById('err-stars').classList.remove('show');
+    });
+    btn.addEventListener('mouseenter', () => {
+        const v = parseInt(btn.dataset.val);
+        document.querySelectorAll('#star-input button').forEach(b => {
+            b.style.color = parseInt(b.dataset.val) <= v ? 'var(--gold)' : '';
+            b.style.fontVariationSettings = parseInt(b.dataset.val) <= v ? "'FILL' 1" : "'FILL' 0";
+        });
+    });
+});
+document.getElementById('star-input').addEventListener('mouseleave', () => {
+    document.querySelectorAll('#star-input button').forEach(b => {
+        const active = parseInt(b.dataset.val) <= selectedStars;
+        b.style.color = active ? 'var(--gold)' : '';
+        b.style.fontVariationSettings = active ? "'FILL' 1" : "'FILL' 0";
+    });
+});
 
 // Spam check: basic text quality filter
 function isSpam(text) {
@@ -1323,6 +1585,14 @@ document.getElementById('review-form').addEventListener('submit', function(e) {
         document.getElementById('err-email').classList.remove('show');
     }
 
+    // Validate stars
+    if (selectedStars === 0) {
+        document.getElementById('err-stars').classList.add('show');
+        valid = false;
+    } else {
+        document.getElementById('err-stars').classList.remove('show');
+    }
+
     // Validate text
     if (isSpam(text)) {
         document.getElementById('r-text').classList.add('error');
@@ -1346,6 +1616,7 @@ document.getElementById('review-form').addEventListener('submit', function(e) {
         id: 'rev_' + Date.now(),
         name,
         email,
+        stars: selectedStars,
         text,
         date: new Date().toISOString().split('T')[0],
         approved: false
@@ -1390,7 +1661,7 @@ function renderAdminPanel() {
     list.innerHTML = pending.map(r => `
         <div class="pending-review-item" id="pending-${r.id}">
             <div style="font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--charcoal);">
-                <strong>${escapeHtml(r.name)}</strong> · ${formatDate(r.date)}
+                <strong>${escapeHtml(r.name)}</strong> · ${renderStars(r.stars)} · ${formatDate(r.date)}
             </div>
             <p style="font-size:0.82rem;color:rgba(61,43,31,0.65);line-height:1.6;">${escapeHtml(r.text)}</p>
             <p style="font-size:0.65rem;color:rgba(61,43,31,0.3);">el. paštas: ${escapeHtml(r.email)}</p>
@@ -1419,9 +1690,14 @@ function approveReview(id) {
     const el = document.getElementById('pending-' + id);
     if (el) el.remove();
 
-    // Add to reviews grid with animation
+    // Add to reviews grid with animation (insert at very top)
     const grid = document.getElementById('reviews-grid');
     grid.insertAdjacentHTML('afterbegin', renderReviewCard(review, true));
+    // Update count
+    const totalApproved = getApproved();
+    const userCount = totalApproved.filter(r => !r.id.startsWith('seed')).length;
+    const totalCount = 5 + userCount;
+    document.getElementById('review-count-display').textContent = totalCount + (totalCount === 1 ? ' atsiliepimas' : ' atsiliepimai');
 
     if (!pending.length) document.getElementById('no-pending-msg').style.display = 'block';
 }
@@ -1513,5 +1789,19 @@ document.getElementById('estimate-form').addEventListener('submit', function(e) 
         desc: document.getElementById('e-desc').value,
         date: new Date().toISOString()
     };
-    const existing = JSON.parse(localStorage.getItem('mm_e
+    const existing = JSON.parse(localStorage.getItem('mm_estimates') || '[]');
+    existing.push(req);
+    localStorage.setItem('mm_estimates', JSON.stringify(existing));
+
+    document.getElementById('estimate-form-wrap').style.display = 'none';
+    document.getElementById('estimate-success').classList.add('show');
+});
+
+// ── Init ──
+renderAllReviews();
+</script>
+
+</body>
+</html>
+
 
