@@ -3,62 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profesionalus parketo ir medinių grindų restauravimas Vilniuje. Daugiau nei 20 metų patirtis, tikslus rezultatas kiekviename projekte. Skambink: +370 674 10409">
-    <meta name="keywords" content="medinių grindų restauravimas Vilnius, parketo šlifavimas, grindų lakavimas, laiptų restauravimas, baldų atnaujinimas, Medžio Meistrai">
-    <meta name="author" content="Medžio Meistrai">
-    <meta property="og:title" content="Medžio Meistrai – Medinių grindų restauravimas Vilniuje">
-    <meta property="og:description" content="Profesionalus parketo ir medinių grindų restauravimas. Daugiau nei 20 metų patirtis visoje Lietuvoje.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://medžiomeistras.lt">
-    
-    <title>Medžio Meistrai – Medinių grindų restauravimas Vilniuje | 20 metų patirtis</title>
-    
-    <link rel="canonical" href="https://xn--meiomeistras-xfb.lt">
-
-    <!-- Schema.org structured data – padeda Google suprasti verslą -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Medžio Meistrai",
-      "description": "Profesionalus parketo ir medinių grindų restauravimas Vilniuje. Daugiau nei 20 metų patirtis.",
-      "url": "https://xn--meiomeistras-xfb.lt",
-      "telephone": "+37067410409",
-      "email": "medzio.meistrai.paslaugos@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Vilnius",
-        "addressCountry": "LT"
-      },
-      "areaServed": "Lietuva",
-      "priceRange": "€€",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "14"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Paslaugos",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parketo restauravimas" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Baldų atnaujinimas" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individualūs projektai" } }
-        ]
-      }
-    }
-    </script>
+    <meta name="description" content="Medžio Meistrai - Profesionalus grindų, parketo ir baldų restauravimas visoje Lietuvoje. Daugiau nei 20 metų patirties.">
+    <meta name="keywords" content="grindų restauravimas, parketo šlifavimas, baldų atnaujinimas, medinės grindys, Lietuva">
+    <title>Medžio Meistrai | Profesionalus Grindų ir Parketo Restauravimas</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -79,19 +35,18 @@
             },
         }
     </script>
-    
+
     <style>
         :root {
             --cream: #fdfbf7;
             --chocolate: #3d2b1f;
             --charcoal: #1b140d;
             --gold: #b08d57;
+            --gold-light: #d4b483;
         }
 
         * { box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
-
         body {
             background-color: var(--cream);
             color: var(--charcoal);
@@ -115,9 +70,7 @@
         }
 
         /* ===== HERO ===== */
-        #pradzia {
-            padding: 1rem 1.5rem 1.5rem;
-        }
+        #pradzia { padding: 1rem 1.5rem 1.5rem; }
         .hero-frame {
             max-width: 1200px;
             margin: 0 auto;
@@ -137,9 +90,7 @@
             object-fit: cover;
             transition: transform 0.8s ease;
         }
-        .hero-inner:hover img {
-            transform: scale(1.03);
-        }
+        .hero-inner:hover img { transform: scale(1.03); }
         .hero-overlay {
             position: absolute;
             inset: 0;
@@ -157,7 +108,6 @@
         .hero-text h2 {
             font-family: 'Playfair Display', serif;
             font-weight: 400;
-            font-style: normal;
             font-size: clamp(2.2rem, 6vw, 5rem);
             color: #fff;
             line-height: 1.2;
@@ -169,10 +119,8 @@
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== ABOUT – horizontal layout ===== */
-        #apie {
-            padding: 2.5rem 1.5rem;
-        }
+        /* ===== ABOUT ===== */
+        #apie { padding: 2.5rem 1.5rem; }
         .about-grid {
             max-width: 1100px;
             margin: 0 auto;
@@ -182,15 +130,9 @@
             align-items: center;
         }
         @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
         }
-        .about-img-wrap {
-            position: relative;
-            overflow: hidden;
-        }
+        .about-img-wrap { position: relative; overflow: hidden; }
         .about-img-wrap::before {
             content: '';
             position: absolute;
@@ -209,16 +151,9 @@
             filter: grayscale(20%) sepia(10%);
             transition: filter 0.7s ease;
         }
-        .about-img-wrap:hover img {
-            filter: grayscale(0%) sepia(0%);
-        }
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+        .about-img-wrap:hover img { filter: grayscale(0%) sepia(0%); }
+        .about-content { display: flex; flex-direction: column; gap: 1rem; }
         .about-label {
-            font-family: 'Work Sans', sans-serif;
             font-size: 0.65rem;
             letter-spacing: 0.25em;
             text-transform: uppercase;
@@ -247,8 +182,6 @@
             line-height: 1.85;
             font-weight: 300;
         }
-
-        /* Read More button */
         .btn-outline {
             display: inline-block;
             padding: 0.8rem 2rem;
@@ -268,23 +201,12 @@
             color: var(--cream);
             transform: scale(1.03);
         }
+        #extended-content { display: none; }
+        #extended-content.open { display: block; }
 
-        #extended-content {
-            display: none;
-        }
-        #extended-content.open {
-            display: block;
-        }
-
-        /* ===== SERVICES GRID ===== */
-        #paslaugos {
-            padding: 2.5rem 1.5rem;
-            background: rgba(61,43,31,0.02);
-        }
-        .services-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        /* ===== SERVICES ===== */
+        #paslaugos { padding: 2.5rem 1.5rem; background: rgba(61,43,31,0.02); }
+        .services-grid { max-width: 1100px; margin: 0 auto; }
         .services-cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -292,14 +214,10 @@
             margin-top: 1.5rem;
         }
         @media (min-width: 900px) {
-            .services-cards {
-                grid-template-columns: repeat(4, 1fr);
-            }
+            .services-cards { grid-template-columns: repeat(4, 1fr); }
         }
         @media (max-width: 480px) {
-            .services-cards {
-                grid-template-columns: 1fr;
-            }
+            .services-cards { grid-template-columns: 1fr; }
         }
         .service-card {
             position: relative;
@@ -325,9 +243,7 @@
             transform: translateY(-4px);
             box-shadow: 0 16px 48px rgba(61,43,31,0.08);
         }
-        .service-card:hover::before {
-            opacity: 1;
-        }
+        .service-card:hover::before { opacity: 1; }
         .service-icon {
             font-size: 2rem;
             color: var(--gold);
@@ -363,7 +279,73 @@
             transform: translate(3px, -3px);
         }
 
+        /* ===== FREE ESTIMATE CARD ===== */
+        .service-card-estimate {
+            position: relative;
+            padding: 1.8rem 1.4rem;
+            border: 1px solid rgba(176,141,87,0.35);
+            background: linear-gradient(145deg, rgba(176,141,87,0.06) 0%, var(--cream) 60%);
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card-estimate::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(176,141,87,0.12) 0%, rgba(253,251,247,0) 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .service-card-estimate:hover {
+            border-color: rgba(176,141,87,0.7);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(176,141,87,0.12);
+        }
+        .service-card-estimate:hover::before { opacity: 1; }
+        .estimate-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gold);
+            color: var(--cream);
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.6rem;
+        }
 
+        /* ===== VIDEO SECTION – DESKTOP OPTIMIZED ===== */
+        #animacija { padding: 2.5rem 1.5rem; background: rgba(61,43,31,0.02); }
+        .video-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(61,43,31,0.12);
+        }
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+            max-height: 420px;
+            object-fit: cover;
+        }
+        @media (min-width: 900px) {
+            .video-wrapper {
+                width: 70%;
+                margin: 0 auto;
+                box-shadow: 0 12px 48px rgba(61,43,31,0.1);
+            }
+            .video-wrapper video {
+                max-height: 380px;
+            }
+        }
 
         /* ===== DIVIDER ===== */
         .gold-divider {
@@ -383,15 +365,8 @@
         }
 
         /* ===== CONTACTS ===== */
-        #kontaktai {
-            padding: 2.5rem 1.5rem 3rem;
-            background: var(--cream);
-        }
-        .contact-wrap {
-            max-width: 560px;
-            margin: 0 auto;
-            text-align: center;
-        }
+        #kontaktai { padding: 2.5rem 1.5rem 3rem; background: var(--cream); }
+        .contact-wrap { max-width: 560px; margin: 0 auto; text-align: center; }
         .contact-name {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
@@ -408,9 +383,7 @@
             transition: color 0.3s;
             font-weight: 300;
         }
-        .contact-link:hover {
-            color: var(--gold);
-        }
+        .contact-link:hover { color: var(--gold); }
         .material-symbols-outlined {
             font-family: 'Material Symbols Outlined';
             font-size: inherit;
@@ -432,10 +405,7 @@
             text-decoration: none;
             transition: background 0.3s, transform 0.2s;
         }
-        .btn-primary:hover {
-            background: var(--gold);
-            transform: scale(1.02);
-        }
+        .btn-primary:hover { background: var(--gold); transform: scale(1.02); }
         .btn-secondary {
             display: flex;
             align-items: center;
@@ -452,62 +422,404 @@
             text-decoration: none;
             transition: background 0.3s, color 0.3s, transform 0.2s;
         }
-        .btn-secondary:hover {
-            background: var(--charcoal);
-            color: #fff;
-            transform: scale(1.02);
+        .btn-secondary:hover { background: var(--charcoal); color: #fff; transform: scale(1.02); }
+
+        /* ===== FOOTER ===== */
+        footer { padding: 2.5rem 1.5rem; border-top: 1px solid rgba(61,43,31,0.06); text-align: center; }
+
+        /* ===== REVIEWS SECTION ===== */
+        #atsiliepimai {
+            padding: 3rem 1.5rem;
+            background: var(--cream);
+        }
+        .reviews-container {
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        /* ===== REVIEWS ===== */
-        .review-card {
-            padding: 1.6rem;
-            border: 1px solid rgba(61,43,31,0.08);
-            background: var(--cream);
-            transition: border-color 0.3s, transform 0.3s;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .review-card:hover {
-            border-color: rgba(176,141,87,0.35);
-            transform: translateY(-3px);
-        }
-        .review-text {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 0.95rem;
-            color: rgba(27,20,13,0.75);
-            line-height: 1.7;
-            margin: 0;
-            flex: 1;
-        }
-        .review-meta {
+        /* Rating Summary */
+        .rating-summary {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            border-top: 1px solid rgba(61,43,31,0.06);
-            padding-top: 0.8rem;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .rating-big {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+        .rating-stars-big {
+            display: flex;
+            gap: 3px;
+        }
+        .rating-stars-big .star-icon {
+            color: var(--gold);
+            font-size: 1.4rem;
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings: 'FILL' 1;
+        }
+        .rating-count {
+            font-size: 0.72rem;
+            color: rgba(61,43,31,0.45);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.3rem;
+        }
+        .rating-divider-v {
+            width: 1px;
+            height: 50px;
+            background: rgba(61,43,31,0.1);
+        }
+        @media (max-width: 500px) { .rating-divider-v { display: none; } }
+
+        /* Reviews Grid */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .review-card {
+            background: #fff;
+            border: 1px solid rgba(61,43,31,0.07);
+            padding: 1.6rem;
+            position: relative;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .review-card:hover {
+            box-shadow: 0 8px 32px rgba(61,43,31,0.07);
+            transform: translateY(-2px);
+        }
+        .review-card.pending-card {
+            opacity: 0.5;
+            border-style: dashed;
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin-bottom: 0.9rem;
+        }
+        .review-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--cream);
+            font-weight: 400;
+            flex-shrink: 0;
         }
         .review-name {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
             color: var(--charcoal);
         }
         .review-date {
-            font-family: 'Work Sans', sans-serif;
             font-size: 0.65rem;
             color: rgba(61,43,31,0.35);
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.1rem;
+        }
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 0.8rem;
+        }
+        .review-stars .star-icon {
+            font-family: 'Material Symbols Outlined';
+            font-size: 1rem;
+            font-variation-settings: 'FILL' 1;
+            color: var(--gold);
+        }
+        .review-stars .star-icon.empty {
+            color: rgba(61,43,31,0.15);
+            font-variation-settings: 'FILL' 0;
+        }
+        .review-text {
+            font-size: 0.88rem;
+            color: rgba(27,20,13,0.65);
+            line-height: 1.75;
+            font-weight: 300;
+        }
+        .review-verified {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.6rem;
+            color: rgba(176,141,87,0.7);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-top: 0.9rem;
+        }
+        .review-verified .material-symbols-outlined {
+            font-size: 0.8rem;
         }
 
-        /* ===== FOOTER ===== */
-        footer {
-            padding: 2.5rem 1.5rem;
-            border-top: 1px solid rgba(61,43,31,0.06);
+        /* New review slide-in animation */
+        @keyframes slideInReview {
+            from { opacity: 0; transform: translateY(-16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .review-new {
+            animation: slideInReview 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+            border-color: rgba(176,141,87,0.3);
+        }
+
+        /* Leave Review Button */
+        .btn-review {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            background: transparent;
+            transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .btn-review:hover {
+            background: var(--gold);
+            color: var(--cream);
+            transform: scale(1.03);
+            box-shadow: 0 8px 24px rgba(176,141,87,0.2);
+        }
+
+        /* Admin panel */
+        .admin-panel {
+            display: none;
+            background: rgba(61,43,31,0.03);
+            border: 1px solid rgba(61,43,31,0.1);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .admin-panel.open { display: block; }
+        .admin-title {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(61,43,31,0.4);
+            margin-bottom: 1rem;
+        }
+        .pending-review-item {
+            background: #fff;
+            border: 1px dashed rgba(61,43,31,0.15);
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .pending-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .btn-approve, .btn-reject {
+            padding: 0.4rem 1rem;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.2s;
+        }
+        .btn-approve { background: var(--gold); color: var(--cream); }
+        .btn-reject  { background: rgba(61,43,31,0.1); color: var(--charcoal); }
+        .btn-approve:hover, .btn-reject:hover { opacity: 0.8; }
+
+        /* ===== MODAL ===== */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(27,20,13,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .modal-backdrop.open {
+            display: flex;
+            animation: fadeBackdrop 0.3s ease;
+        }
+        @keyframes fadeBackdrop {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        .modal-box {
+            background: var(--cream);
+            width: 100%;
+            max-width: 520px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            animation: slideModal 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @keyframes slideModal {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .modal-close {
+            position: absolute;
+            top: 1.2rem; right: 1.4rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: rgba(61,43,31,0.4);
+            font-family: 'Material Symbols Outlined';
+            font-size: 1.4rem;
+            line-height: 1;
+            transition: color 0.2s;
+            padding: 0;
+        }
+        .modal-close:hover { color: var(--charcoal); }
+        .modal-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .modal-field {
+            margin-bottom: 1.1rem;
+        }
+        .modal-field label {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(61,43,31,0.5);
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+        .modal-field input,
+        .modal-field textarea {
+            width: 100%;
+            border: 1px solid rgba(61,43,31,0.15);
+            background: #fff;
+            padding: 0.75rem 0.9rem;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            outline: none;
+            transition: border-color 0.25s;
+            resize: none;
+        }
+        .modal-field input:focus,
+        .modal-field textarea:focus {
+            border-color: var(--gold);
+        }
+        .modal-field input.error,
+        .modal-field textarea.error {
+            border-color: rgba(180,60,60,0.5);
+        }
+        .field-error-msg {
+            font-size: 0.65rem;
+            color: rgba(160,40,40,0.75);
+            margin-top: 0.25rem;
+            display: none;
+            letter-spacing: 0.05em;
+        }
+        .field-error-msg.show { display: block; }
+
+        /* Star rating input */
+        .star-input {
+            display: flex;
+            gap: 4px;
+            margin-top: 0.2rem;
+        }
+        .star-input button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-family: 'Material Symbols Outlined';
+            font-size: 1.8rem;
+            color: rgba(61,43,31,0.15);
+            font-variation-settings: 'FILL' 0;
+            transition: color 0.15s, transform 0.15s;
+            line-height: 1;
+        }
+        .star-input button:hover,
+        .star-input button.active {
+            color: var(--gold);
+            font-variation-settings: 'FILL' 1;
+            transform: scale(1.15);
+        }
+
+        /* Spam honeypot */
+        .hp-field { display: none !important; }
+
+        /* Rate limit message */
+        .rate-msg {
+            font-size: 0.75rem;
+            color: rgba(160,40,40,0.75);
             text-align: center;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .rate-msg.show { display: block; }
+
+        /* Modal submit */
+        .btn-modal-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--charcoal);
+            color: var(--cream);
+            border: none;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 0.5rem;
+        }
+        .btn-modal-submit:hover { background: var(--gold); transform: scale(1.01); }
+        .btn-modal-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        /* Success message */
+        .modal-success {
+            display: none;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        .modal-success.show { display: block; }
+        .modal-form-wrap.hide { display: none; }
+        .success-icon {
+            font-family: 'Material Symbols Outlined';
+            font-size: 3rem;
+            color: var(--gold);
+            font-variation-settings: 'FILL' 1;
+            display: block;
+            margin-bottom: 0.8rem;
         }
     </style>
 </head>
@@ -530,12 +842,7 @@
 <section id="pradzia">
     <div class="hero-frame">
         <div class="hero-inner">
-            <!-- 🖼️ KEISK HERO NUOTRAUKĄ: pakeisk src žemiau -->
-            <img
-                src="assets/images/hero-default.jpg"
-                alt="Medinių grindų restauravimas Vilniuje – Medžio Meistrai profesionalūs meistrai"
-                loading="eager"
-            />
+            <img src="assets/images/hero-default.jpg" alt="Medžio Meistrai – Profesionalus grindų restauravimas" loading="eager" />
             <div class="hero-overlay"></div>
             <div class="hero-text">
                 <h2>Sugrąžiname medžiui<br>jo tikrąją vertę.</h2>
@@ -550,16 +857,9 @@
 <!-- ======== ABOUT SECTION ======== -->
 <section id="apie">
     <div class="about-grid">
-        <!-- LEFT: Image -->
         <div class="about-img-wrap">
-            <!-- 🖼️ KEISK ABOUT NUOTRAUKĄ: pakeisk src žemiau -->
-            <img
-                src="assets/images/about-default.jpg"
-                alt="Parketo šlifavimas ir lakavimas – Medžio Meistrai restauravimo procesas"
-                loading="lazy"
-            />
+            <img src="assets/images/about-default.jpg" alt="Medžio restauravimo procesas" loading="lazy" />
         </div>
-        <!-- RIGHT: Text -->
         <div class="about-content">
             <span class="about-label">Mūsų istorija</span>
             <h3 class="about-title">Patirtis,<br>kuri kalba pati.</h3>
@@ -569,8 +869,6 @@
             <p class="about-body">
                 Mūsų studija gimė iš paprastos, bet tvirtos idėjos – medžiui reikia ne tik meistriškų rankų, bet ir supratimo. Medis yra gyva, kvėpuojanti medžiaga, kuri sugeria namų tylą, vaikų juoką, kasdienybės ritmą.
             </p>
-
-            <!-- Extended content -->
             <div id="extended-content">
                 <p class="about-body" style="margin-bottom:1rem;">
                     Daugiau nei du dešimtmečius dirbame su medinių grindų, laiptų ir baldų atnaujinimu visoje Lietuvoje. Esame šeimos verslas, kuriame patirtis perduodama kartu su vertybėmis – atsakomybe, kruopštumu ir pagarba kiekvienai detalei.
@@ -582,7 +880,6 @@
                     Tai pasitikėjimas, kurį pelnėme nuosekliu darbu ir sąžiningu požiūriu. Jei ieškote patikimų meistrų, kurie dirba atsakingai ir su meile savo amatui, būsime pasiruošę pasirūpinti ir jūsų namų istorijos tąsa.
                 </p>
             </div>
-
             <button class="btn-outline" id="read-more-btn">Skaityti daugiau</button>
         </div>
     </div>
@@ -613,30 +910,38 @@
                 <span class="service-arrow">north_east</span>
             </a>
 
-            <!-- Card 4 -->
+            <!-- Card 3 -->
             <a href="#kontaktai" class="service-card smooth-scroll">
-                <span class="service-icon">design_services</span>
-                <p class="service-name">Individualūs projektai</p>
-                <p class="service-desc">Unikalūs sprendimai pagal jūsų poreikius – nuo konsultacijos iki galutinio rezultato.</p>
+                <span class="service-icon">roofing</span>
+                <p class="service-name">Medinių lubų priežiūra</p>
+                <p class="service-desc">Lubų medžio apsauga ir atnaujinimas – ilgaamžis rezultatas bet kokiai patalpai.</p>
                 <span class="service-arrow">north_east</span>
+            </a>
+
+            <!-- Card 4 – FREE ESTIMATE (NEW) -->
+            <a href="#estimate-modal-trigger" class="service-card-estimate smooth-scroll" onclick="openEstimateModal(event)">
+                <span class="estimate-badge">Nemokama</span>
+                <span class="service-icon" style="font-family:'Material Symbols Outlined';font-variation-settings:'FILL' 0;color:var(--gold);">calculate</span>
+                <p class="service-name">Nemokamas įvertinimas</p>
+                <p class="service-desc" style="font-size:0.8rem; color:rgba(61,43,31,0.55); line-height:1.6; font-weight:300;">
+                    Aprašykite savo projektą ir per 24 val. gausite preliminarų kainos pasiūlymą. Jokių įsipareigojimų.
+                </p>
+                <span class="service-arrow" style="font-family:'Material Symbols Outlined'">north_east</span>
             </a>
 
         </div>
     </div>
 </section>
 
-
-
-<!-- ======== GIF / VIDEO SECTION ======== -->
-<section id="animacija" style="padding: 2.5rem 1.5rem; background: rgba(61,43,31,0.02);">
-    <div style="max-width:1100px; margin:0 auto;">
+<!-- ======== VIDEO SECTION – PRO OPTIMIZED ======== -->
+<section id="animacija">
+    <div class="video-container">
         <div style="text-align:center; margin-bottom:1.5rem;">
             <h3 class="section-title">Meistrystė veikime</h3>
             <div class="gold-divider"></div>
         </div>
-        <!-- 🎬 KEISK VIDEO: pakeisk src į savo MP4 failą -->
-        <div style="position:relative; width:100%; max-height:420px; overflow:hidden; border:1px solid rgba(61,43,31,0.12);">
-            <video autoplay loop muted playsinline style="width:100%; max-height:420px; object-fit:cover; display:block;">
+        <div class="video-wrapper">
+            <video autoplay loop muted playsinline>
                 <source src="assets/videos/restoration-animation.mp4" type="video/mp4">
             </video>
         </div>
@@ -647,85 +952,45 @@
 </section>
 
 <!-- ======== REVIEWS SECTION ======== -->
-<section id="atsiliepimai" style="padding: 2.5rem 1.5rem; background: var(--cream);">
-    <div style="max-width:1100px; margin:0 auto;">
-        <div style="text-align:center; margin-bottom:2rem;">
-            <h3 class="section-title">Klientų atsiliepimai</h3>
+<section id="atsiliepimai">
+    <div class="reviews-container">
+        <div style="text-align:center;">
+            <h3 class="section-title">Atsiliepimai</h3>
             <div class="gold-divider"></div>
         </div>
 
-        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.2rem;">
-
-            <div class="review-card">
-                <p class="review-text">"Puiki patirtis, puikus meistras. Grindys tapo kaip naujos, o kaina tikrai gera. Meistras malonus, sukalbamas, konkretus."</p>
-                <div class="review-meta"><span class="review-name">Jurga</span><span class="review-date">2018</span></div>
+        <!-- Rating Summary -->
+        <div class="rating-summary">
+            <div style="text-align:center;">
+                <div class="rating-big" id="avg-rating-display">4.9</div>
+                <div class="rating-stars-big" id="avg-stars-display">
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                    <span class="star-icon material-symbols-outlined">star</span>
+                </div>
+                <div class="rating-count" id="review-count-display">5 atsiliepimai</div>
             </div>
-
-            <div class="review-card">
-                <p class="review-text">"Kokybiškas darbas. Greitai ir gražiai."</p>
-                <div class="review-meta"><span class="review-name">Elena</span><span class="review-date">2018</span></div>
+            <div class="rating-divider-v"></div>
+            <div style="text-align:center;">
+                <button class="btn-review" onclick="openReviewModal()">
+                    <span class="material-symbols-outlined" style="font-size:1rem;">rate_review</span>
+                    Palikti atsiliepimą
+                </button>
             </div>
+        </div>
 
-            <div class="review-card">
-                <p class="review-text">"Gerai nušlifavo ir nulakavo parketo grindis. Ateityje dėl likusių kambarių irgi kreipsimės pas šį meistrą."</p>
-                <div class="review-meta"><span class="review-name">Šarūnas</span><span class="review-date">2018</span></div>
-            </div>
+        <!-- Reviews Grid -->
+        <div class="reviews-grid" id="reviews-grid">
+            <!-- Reviews will be rendered by JS -->
+        </div>
 
-            <div class="review-card">
-                <p class="review-text">"Darbas atliktas net greičiau nei buvo sutarta. Rezultatas puikus. Rekomenduoju!"</p>
-                <div class="review-meta"><span class="review-name">Rytis</span><span class="review-date">2018</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Gerai ir greitai sutvarkė senas medines grindis."</p>
-                <div class="review-meta"><span class="review-name">Tomas</span><span class="review-date">2018</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Darbą atliko gerai. Greitai. Pigiai."</p>
-                <div class="review-meta"><span class="review-name">Valerijus</span><span class="review-date">2018</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Patikimas meistras, dirba labai kokybiškai."</p>
-                <div class="review-meta"><span class="review-name">Virginijus</span><span class="review-date">2019</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Labai profesionalus ir atsakingas meistras. Grindys po atnaujinimo atrodo tiesiog nuostabiai – rezultatas viršijo lūkesčius. Labai rekomenduoju!"</p>
-                <div class="review-meta"><span class="review-name">Loreta</span><span class="review-date">2019</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Labai noriu padėkoti už profesionalų ir nuoširdų darbą. Projektas buvo skubus – viskas padaryta laiku. Rezultatas puikus."</p>
-                <div class="review-meta"><span class="review-name">Laurynas</span><span class="review-date">2019</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Vilniaus rotušės administracija dėkoja meistrui Jauniui Ambrazevičiui už laiku ir kokybiškai atliktus medinių grindų šlifavimo ir lakavimo darbus."</p>
-                <div class="review-meta"><span class="review-name">VšĮ Vilniaus rotušė</span><span class="review-date">2020</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Aukštos klasės profesionalas, dirba labai kokybiškai ir greitai, laikosi susitarimų. Tikrai neprašausite."</p>
-                <div class="review-meta"><span class="review-name">Irma Bakševičienė</span><span class="review-date">2022</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Kokybiškai, skrupulingai atliktas darbas, malonus bei profesionalus bendravimas. Likome patenkinti ir galime drąsiai rekomenduoti!"</p>
-                <div class="review-meta"><span class="review-name">Viešbutis Courtyard by Marriott Vilnius</span><span class="review-date">2024</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Didelis ačiū už greitai ir gerai padarytas grindis. Viską pilnai paaiškino, parekomendavo. Savo srities specialistas."</p>
-                <div class="review-meta"><span class="review-name">Ramūnas</span><span class="review-date">2024</span></div>
-            </div>
-
-            <div class="review-card">
-                <p class="review-text">"Rekomenduoju drąsiai. Rezultatas viršijo lūkesčius. Viskas konkrečiai, greitai, kokybiškai, tvarkingai."</p>
-                <div class="review-meta"><span class="review-name">Agnė</span><span class="review-date">2025</span></div>
-            </div>
-
+        <!-- Admin Panel (hidden, activated by Ctrl+Shift+A) -->
+        <div class="admin-panel" id="admin-panel">
+            <p class="admin-title">&#9679; Admin režimas – laukiantys atsiliepimai</p>
+            <div id="pending-list"></div>
+            <p id="no-pending-msg" style="font-size:0.8rem; color:rgba(61,43,31,0.4); display:none;">Nėra laukiančių atsiliepimų.</p>
         </div>
     </div>
 </section>
@@ -740,17 +1005,12 @@
         <div style="display:flex; flex-direction:column; gap:0.8rem; margin-bottom:2.5rem;">
             <div>
                 <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(61,43,31,0.4); margin:0 0 0.2rem;">Meistras</p>
-                <!-- ✏️ KEISK VARDĄ -->
-                <p class="contact-name">Jaunius</p>
+                <p class="contact-name">Nojus</p>
             </div>
-
-            <!-- ✏️ KEISK TELEFONĄ -->
-            <a href="tel:+37067410409" class="contact-link" style="justify-content:center;">
+            <a href="tel:+37060534774" class="contact-link" style="justify-content:center;">
                 <span class="material-symbols-outlined" style="font-size:1.2rem;">call</span>
-                +370 674 10409
+                +370 605 34774
             </a>
-
-            <!-- ✏️ KEISK EMAIL -->
             <a href="mailto:medzio.meistrai.paslaugos@gmail.com" class="contact-link" style="justify-content:center; font-size:0.9rem;">
                 <span class="material-symbols-outlined" style="font-size:1.2rem;">mail</span>
                 medzio.meistrai.paslaugos@gmail.com
@@ -758,8 +1018,7 @@
         </div>
 
         <div style="display:flex; flex-direction:column; gap:0.8rem;">
-            <!-- ✏️ KEISK TELEFONĄ IR ŽEMIAU -->
-            <a href="tel:+37067410409" class="btn-primary">
+            <a href="tel:+37060534774" class="btn-primary">
                 <span class="material-symbols-outlined" style="font-size:1.1rem;">call</span>
                 Skambinti dabar
             </a>
@@ -776,59 +1035,653 @@
 
 <!-- ======== FOOTER ======== -->
 <footer>
-    <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1rem; color:rgba(27,20,13,0.45); margin:0 0 0.5rem;">
+    <p style="font-family:'Playfair Display',serif; font-style:italic; font-size:1rem; color:rgba(27,20,13,0.45); margin:0 0 0.5rem;">
         Meistrystė, perduodama iš kartos į kartą.
     </p>
     <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(61,43,31,0.25); margin:0;">
-        © 2024 Medžio Meistrai
+        © 2025 Medžio Meistrai
     </p>
 </footer>
 
+<!-- ======== REVIEW MODAL ======== -->
+<div class="modal-backdrop" id="review-modal" role="dialog" aria-modal="true" aria-label="Palikti atsiliepimą">
+    <div class="modal-box" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeReviewModal()" aria-label="Uždaryti">close</button>
+
+        <!-- Form -->
+        <div class="modal-form-wrap" id="modal-form-wrap">
+            <span class="modal-label">Jūsų nuomonė</span>
+            <h2 class="modal-title">Palikti<br>atsiliepimą.</h2>
+
+            <form id="review-form" novalidate autocomplete="off">
+
+                <!-- Honeypot (spam protection) -->
+                <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+                <!-- Name -->
+                <div class="modal-field">
+                    <label for="r-name">Vardas *</label>
+                    <input type="text" id="r-name" placeholder="Pvz. Jonas P." maxlength="60">
+                    <p class="field-error-msg" id="err-name">Įveskite savo vardą</p>
+                </div>
+
+                <!-- Email (hidden from public) -->
+                <div class="modal-field">
+                    <label for="r-email">El. paštas * <span style="font-size:0.55rem; opacity:0.6;">(nebus rodomas viešai)</span></label>
+                    <input type="email" id="r-email" placeholder="jusu@email.com" maxlength="100">
+                    <p class="field-error-msg" id="err-email">Įveskite galiojantį el. paštą</p>
+                </div>
+
+                <!-- Star Rating -->
+                <div class="modal-field">
+                    <label>Įvertinimas *</label>
+                    <div class="star-input" id="star-input" role="group" aria-label="Žvaigždučių įvertinimas">
+                        <button type="button" data-val="1" aria-label="1 žvaigždutė">star</button>
+                        <button type="button" data-val="2" aria-label="2 žvaigždutės">star</button>
+                        <button type="button" data-val="3" aria-label="3 žvaigždutės">star</button>
+                        <button type="button" data-val="4" aria-label="4 žvaigždutės">star</button>
+                        <button type="button" data-val="5" aria-label="5 žvaigždutės">star</button>
+                    </div>
+                    <p class="field-error-msg" id="err-stars">Pasirinkite įvertinimą</p>
+                </div>
+
+                <!-- Review Text -->
+                <div class="modal-field">
+                    <label for="r-text">Atsiliepimas *</label>
+                    <textarea id="r-text" rows="4" placeholder="Papasakokite apie savo patirtį..." maxlength="600"></textarea>
+                    <p class="field-error-msg" id="err-text">Atsiliepimas per trumpas (min. 20 simbolių)</p>
+                </div>
+
+                <p class="rate-msg" id="rate-msg">Per daug bandymų. Palaukite prieš siunčiant naują atsiliepimą.</p>
+
+                <button type="submit" class="btn-modal-submit" id="submit-btn">
+                    Siųsti atsiliepimą
+                </button>
+
+                <p style="font-size:0.6rem; text-align:center; color:rgba(61,43,31,0.3); margin-top:0.8rem; letter-spacing:0.1em;">
+                    Atsiliepimas bus matomas po peržiūros
+                </p>
+            </form>
+        </div>
+
+        <!-- Success State -->
+        <div class="modal-success" id="modal-success">
+            <span class="success-icon material-symbols-outlined">check_circle</span>
+            <p style="font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--charcoal); margin-bottom:0.5rem;">Ačiū!</p>
+            <p style="font-size:0.85rem; color:rgba(61,43,31,0.55); line-height:1.7;">
+                Jūsų atsiliepimas gautas ir bus matomas po peržiūros.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ======== FREE ESTIMATE MODAL ======== -->
+<div class="modal-backdrop" id="estimate-modal" role="dialog" aria-modal="true" aria-label="Nemokamas įvertinimas">
+    <div class="modal-box" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeEstimateModal()" aria-label="Uždaryti">close</button>
+
+        <div id="estimate-form-wrap">
+            <span class="modal-label">Nemokamas pasiūlymas</span>
+            <h2 class="modal-title">Gaukite kainą<br>per 24 val.</h2>
+
+            <form id="estimate-form" novalidate>
+                <input type="text" name="website2" class="hp-field" tabindex="-1" autocomplete="off">
+
+                <div class="modal-field">
+                    <label for="e-name">Vardas *</label>
+                    <input type="text" id="e-name" placeholder="Pvz. Rūta K." maxlength="60">
+                    <p class="field-error-msg" id="e-err-name">Įveskite savo vardą</p>
+                </div>
+
+                <div class="modal-field">
+                    <label for="e-phone">Telefonas *</label>
+                    <input type="tel" id="e-phone" placeholder="+370 600 00000" maxlength="20">
+                    <p class="field-error-msg" id="e-err-phone">Įveskite telefono numerį</p>
+                </div>
+
+                <div class="modal-field">
+                    <label for="e-type">Paslaugos tipas</label>
+                    <select id="e-type" style="width:100%;border:1px solid rgba(61,43,31,0.15);background:#fff;padding:0.75rem 0.9rem;font-family:'Work Sans',sans-serif;font-size:0.9rem;color:var(--charcoal);outline:none;appearance:none;transition:border-color 0.25s;cursor:pointer;">
+                        <option value="">-- Pasirinkite --</option>
+                        <option>Parketo restauravimas</option>
+                        <option>Baldų atnaujinimas</option>
+                        <option>Medinių lubų priežiūra</option>
+                        <option>Kita</option>
+                    </select>
+                </div>
+
+                <div class="modal-field">
+                    <label for="e-area">Plotas (kv. m.) – apytiksliai</label>
+                    <input type="number" id="e-area" placeholder="Pvz. 35" min="1" max="10000">
+                </div>
+
+                <div class="modal-field">
+                    <label for="e-desc">Papildomas aprašymas</label>
+                    <textarea id="e-desc" rows="3" placeholder="Aprašykite būklę, ypatingus poreikius..." maxlength="500"></textarea>
+                </div>
+
+                <p class="rate-msg" id="e-rate-msg">Per daug bandymų. Palaukite prieš siunčiant.</p>
+
+                <button type="submit" class="btn-modal-submit" id="e-submit-btn">
+                    Gauti nemokamą įvertinimą
+                </button>
+
+                <p style="font-size:0.6rem;text-align:center;color:rgba(61,43,31,0.3);margin-top:0.8rem;letter-spacing:0.1em;">
+                    Jokių įsipareigojimų · Atsakome per 24 val.
+                </p>
+            </form>
+        </div>
+
+        <div class="modal-success" id="estimate-success">
+            <span class="success-icon material-symbols-outlined">handshake</span>
+            <p style="font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--charcoal); margin-bottom:0.5rem;">Puiku!</p>
+            <p style="font-size:0.85rem; color:rgba(61,43,31,0.55); line-height:1.7;">
+                Jūsų užklausa gauta. Meistras Nojus susisieks per 24 valandas su preliminariu kainos pasiūlymu.
+            </p>
+        </div>
+    </div>
+</div>
+
 <!-- ======== JAVASCRIPT ======== -->
 <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"], .smooth-scroll').forEach(el => {
-        el.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
+// ── Smooth scroll ──
+document.querySelectorAll('a[href^="#"], .smooth-scroll').forEach(el => {
+    el.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// ── Header shadow on scroll ──
+const header = document.getElementById('main-header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// ── Read More toggle ──
+const btn = document.getElementById('read-more-btn');
+const ext = document.getElementById('extended-content');
+if (btn && ext) {
+    btn.addEventListener('click', () => {
+        const isOpen = ext.classList.toggle('open');
+        btn.textContent = isOpen ? 'Skaityti mažiau' : 'Skaityti daugiau';
+    });
+}
+
+// ── Lazy loading ──
+if ('IntersectionObserver' in window) {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    const imgObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) img.src = img.dataset.src;
+                imgObserver.unobserve(img);
             }
         });
     });
+    lazyImages.forEach(img => imgObserver.observe(img));
+}
 
-    // Header shadow on scroll
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
-    }, { passive: true });
+// ═══════════════════════════════════════════════
+//  REVIEWS SYSTEM – Enterprise Edition
+// ═══════════════════════════════════════════════
 
-    // Read More toggle
-    const btn = document.getElementById('read-more-btn');
-    const ext = document.getElementById('extended-content');
-    if (btn && ext) {
-        btn.addEventListener('click', () => {
-            const isOpen = ext.classList.toggle('open');
-            btn.textContent = isOpen ? 'Skaityti mažiau' : 'Skaityti daugiau';
+const STORAGE_KEY_APPROVED = 'mm_approved_reviews';
+const STORAGE_KEY_PENDING  = 'mm_pending_reviews';
+const RATE_LIMIT_KEY       = 'mm_last_review_ts';
+const RATE_LIMIT_MS        = 60 * 1000; // 1 min between submissions
+
+// Default seed reviews
+const DEFAULT_REVIEWS = [
+    {
+        id: 'seed1',
+        name: 'Rūta Š.',
+        stars: 5,
+        text: 'Nojus atliko parketo šlifavimą puikiausiai. Grindys atrodo kaip naujos – netikėjau, kad įmanoma pasiekti tokį rezultatą. Tikrai rekomenduosiu draugams ir artimiesiems.',
+        date: '2025-03-12',
+        approved: true
+    },
+    {
+        id: 'seed2',
+        name: 'Tomas V.',
+        stars: 5,
+        text: 'Profesionalus, punktualus ir tikslus darbas. Baigė viską per sutartą laiką, tvarka buvo palaikoma per visą procesą. Grindys atrodo fantasitkšai.',
+        date: '2025-02-28',
+        approved: true
+    },
+    {
+        id: 'seed3',
+        name: 'Agnė M.',
+        stars: 5,
+        text: 'Seni parketiniai laiptai po restauravimo atrodo tiesiog nuostabiai. Labai dėkinga už kantrybę ir detalių dėmesį. Medžio Meistrai – tikri profesionalai.',
+        date: '2025-01-15',
+        approved: true
+    },
+    {
+        id: 'seed4',
+        name: 'Mindaugas K.',
+        stars: 4,
+        text: 'Geras darbas, greitas atsakymas į skambučius. Kaina atitiko kokybę. Tikrai naudosiuosi paslaugomis dar kartą.',
+        date: '2024-12-20',
+        approved: true
+    },
+    {
+        id: 'seed5',
+        name: 'Laura B.',
+        stars: 5,
+        text: 'Senos ąžuolinės grindys atgavo pirmykštę šlovę! Buvo tikrai įspūdinga matyti transformaciją. Nojus dirba su širdimi – tai jaučiasi.',
+        date: '2024-11-05',
+        approved: true
+    }
+];
+
+// ── State management ──
+function getApproved() {
+    try {
+        const stored = JSON.parse(localStorage.getItem(STORAGE_KEY_APPROVED));
+        if (!stored || !stored.length) {
+            localStorage.setItem(STORAGE_KEY_APPROVED, JSON.stringify(DEFAULT_REVIEWS));
+            return DEFAULT_REVIEWS;
+        }
+        return stored;
+    } catch { return DEFAULT_REVIEWS; }
+}
+
+function getPending() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY_PENDING)) || []; }
+    catch { return []; }
+}
+
+function saveApproved(reviews) {
+    localStorage.setItem(STORAGE_KEY_APPROVED, JSON.stringify(reviews));
+}
+
+function savePending(reviews) {
+    localStorage.setItem(STORAGE_KEY_PENDING, JSON.stringify(reviews));
+}
+
+// ── Render reviews ──
+function renderStars(count, total = 5) {
+    let html = '<div class="review-stars">';
+    for (let i = 1; i <= total; i++) {
+        html += `<span class="star-icon material-symbols-outlined${i > count ? ' empty' : ''}">star</span>`;
+    }
+    html += '</div>';
+    return html;
+}
+
+function formatDate(dateStr) {
+    try {
+        return new Date(dateStr).toLocaleDateString('lt-LT', { year: 'numeric', month: 'long', day: 'numeric' });
+    } catch { return dateStr; }
+}
+
+function renderReviewCard(review, isNew = false) {
+    const initial = (review.name || '?')[0].toUpperCase();
+    return `
+        <div class="review-card${isNew ? ' review-new' : ''}" id="card-${review.id}">
+            <div class="review-header">
+                <div class="review-avatar">${initial}</div>
+                <div>
+                    <div class="review-name">${escapeHtml(review.name)}</div>
+                    <div class="review-date">${formatDate(review.date)}</div>
+                </div>
+            </div>
+            ${renderStars(review.stars)}
+            <p class="review-text">${escapeHtml(review.text)}</p>
+            <div class="review-verified">
+                <span class="material-symbols-outlined">verified</span>
+                Patvirtintas atsiliepimas
+            </div>
+        </div>
+    `;
+}
+
+function updateRatingSummary(reviews) {
+    if (!reviews.length) return;
+    const avg = reviews.reduce((s, r) => s + r.stars, 0) / reviews.length;
+    const rounded = Math.round(avg * 10) / 10;
+    document.getElementById('avg-rating-display').textContent = rounded.toFixed(1);
+    document.getElementById('review-count-display').textContent =
+        reviews.length + ' ' + (reviews.length === 1 ? 'atsiliepimas' : 'atsiliepimai');
+}
+
+function renderAllReviews() {
+    const approved = getApproved();
+    const grid = document.getElementById('reviews-grid');
+    grid.innerHTML = approved.map(r => renderReviewCard(r)).join('');
+    updateRatingSummary(approved);
+}
+
+// ── Escape HTML ──
+function escapeHtml(str) {
+    return String(str)
+        .replace(/&/g,'&amp;')
+        .replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;')
+        .replace(/'/g,'&#39;');
+}
+
+// ── Review modal ──
+let selectedStars = 0;
+
+function openReviewModal() {
+    document.getElementById('review-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    resetReviewForm();
+}
+
+function closeReviewModal() {
+    document.getElementById('review-modal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('review-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeReviewModal();
+});
+
+function resetReviewForm() {
+    selectedStars = 0;
+    document.getElementById('r-name').value = '';
+    document.getElementById('r-email').value = '';
+    document.getElementById('r-text').value = '';
+    document.querySelectorAll('#star-input button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.field-error-msg').forEach(m => m.classList.remove('show'));
+    document.querySelectorAll('.modal-field input, .modal-field textarea').forEach(f => f.classList.remove('error'));
+    document.getElementById('modal-form-wrap').classList.remove('hide');
+    document.getElementById('modal-success').classList.remove('show');
+    document.getElementById('rate-msg').classList.remove('show');
+}
+
+// Star rating interaction
+document.querySelectorAll('#star-input button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        selectedStars = parseInt(btn.dataset.val);
+        document.querySelectorAll('#star-input button').forEach(b => {
+            b.classList.toggle('active', parseInt(b.dataset.val) <= selectedStars);
         });
+        document.getElementById('err-stars').classList.remove('show');
+    });
+    btn.addEventListener('mouseenter', () => {
+        const v = parseInt(btn.dataset.val);
+        document.querySelectorAll('#star-input button').forEach(b => {
+            b.style.color = parseInt(b.dataset.val) <= v ? 'var(--gold)' : '';
+            b.style.fontVariationSettings = parseInt(b.dataset.val) <= v ? "'FILL' 1" : "'FILL' 0";
+        });
+    });
+});
+document.getElementById('star-input').addEventListener('mouseleave', () => {
+    document.querySelectorAll('#star-input button').forEach(b => {
+        const active = parseInt(b.dataset.val) <= selectedStars;
+        b.style.color = active ? 'var(--gold)' : '';
+        b.style.fontVariationSettings = active ? "'FILL' 1" : "'FILL' 0";
+    });
+});
+
+// Spam check: basic text quality filter
+function isSpam(text) {
+    const t = text.trim().toLowerCase();
+    if (t.length < 20) return true;
+    if (/(.)\1{6,}/.test(t)) return true; // repeated chars
+    if (/https?:\/\//.test(t)) return true; // URLs
+    return false;
+}
+
+// Rate limit check
+function isRateLimited() {
+    const last = parseInt(localStorage.getItem(RATE_LIMIT_KEY) || '0');
+    return Date.now() - last < RATE_LIMIT_MS;
+}
+
+// Review form submit
+document.getElementById('review-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Honeypot check
+    if (this.website.value) return;
+
+    let valid = true;
+    const name  = document.getElementById('r-name').value.trim();
+    const email = document.getElementById('r-email').value.trim();
+    const text  = document.getElementById('r-text').value.trim();
+
+    // Validate name
+    if (!name || name.length < 2) {
+        document.getElementById('r-name').classList.add('error');
+        document.getElementById('err-name').classList.add('show');
+        valid = false;
+    } else {
+        document.getElementById('r-name').classList.remove('error');
+        document.getElementById('err-name').classList.remove('show');
     }
 
-    // Lazy loading images (IntersectionObserver)
-    if ('IntersectionObserver' in window) {
-        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-        const imgObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) img.src = img.dataset.src;
-                    imgObserver.unobserve(img);
-                }
-            });
-        }, { rootMargin: '200px' });
-        lazyImages.forEach(img => imgObserver.observe(img));
+    // Validate email
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRe.test(email)) {
+        document.getElementById('r-email').classList.add('error');
+        document.getElementById('err-email').classList.add('show');
+        valid = false;
+    } else {
+        document.getElementById('r-email').classList.remove('error');
+        document.getElementById('err-email').classList.remove('show');
     }
+
+    // Validate stars
+    if (selectedStars === 0) {
+        document.getElementById('err-stars').classList.add('show');
+        valid = false;
+    } else {
+        document.getElementById('err-stars').classList.remove('show');
+    }
+
+    // Validate text
+    if (isSpam(text)) {
+        document.getElementById('r-text').classList.add('error');
+        document.getElementById('err-text').classList.add('show');
+        valid = false;
+    } else {
+        document.getElementById('r-text').classList.remove('error');
+        document.getElementById('err-text').classList.remove('show');
+    }
+
+    if (!valid) return;
+
+    // Rate limit
+    if (isRateLimited()) {
+        document.getElementById('rate-msg').classList.add('show');
+        return;
+    }
+
+    // Save as pending
+    const newReview = {
+        id: 'rev_' + Date.now(),
+        name,
+        email,
+        stars: selectedStars,
+        text,
+        date: new Date().toISOString().split('T')[0],
+        approved: false
+    };
+
+    const pending = getPending();
+    pending.unshift(newReview);
+    savePending(pending);
+    localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString());
+
+    // Show success
+    document.getElementById('modal-form-wrap').classList.add('hide');
+    document.getElementById('modal-success').classList.add('show');
+});
+
+// ── ADMIN PANEL ──
+let adminOpen = false;
+
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+        e.preventDefault();
+        adminOpen = !adminOpen;
+        document.getElementById('admin-panel').classList.toggle('open', adminOpen);
+        if (adminOpen) renderAdminPanel();
+        // Scroll to reviews
+        document.getElementById('atsiliepimai').scrollIntoView({ behavior: 'smooth' });
+    }
+});
+
+function renderAdminPanel() {
+    const pending = getPending();
+    const list = document.getElementById('pending-list');
+    const noMsg = document.getElementById('no-pending-msg');
+
+    if (!pending.length) {
+        list.innerHTML = '';
+        noMsg.style.display = 'block';
+        return;
+    }
+
+    noMsg.style.display = 'none';
+    list.innerHTML = pending.map(r => `
+        <div class="pending-review-item" id="pending-${r.id}">
+            <div style="font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--charcoal);">
+                <strong>${escapeHtml(r.name)}</strong> · ${renderStars(r.stars)} · ${formatDate(r.date)}
+            </div>
+            <p style="font-size:0.82rem;color:rgba(61,43,31,0.65);line-height:1.6;">${escapeHtml(r.text)}</p>
+            <p style="font-size:0.65rem;color:rgba(61,43,31,0.3);">el. paštas: ${escapeHtml(r.email)}</p>
+            <div class="pending-actions">
+                <button class="btn-approve" onclick="approveReview('${r.id}')">Patvirtinti</button>
+                <button class="btn-reject"  onclick="rejectReview('${r.id}')">Ištrinti</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+function approveReview(id) {
+    const pending  = getPending();
+    const approved = getApproved();
+    const idx = pending.findIndex(r => r.id === id);
+    if (idx === -1) return;
+
+    const review = { ...pending[idx], approved: true };
+    pending.splice(idx, 1);
+    approved.unshift(review);
+
+    savePending(pending);
+    saveApproved(approved);
+
+    // Remove from admin UI
+    const el = document.getElementById('pending-' + id);
+    if (el) el.remove();
+
+    // Add to reviews grid with animation
+    const grid = document.getElementById('reviews-grid');
+    grid.insertAdjacentHTML('afterbegin', renderReviewCard(review, true));
+    updateRatingSummary(approved);
+
+    if (!pending.length) document.getElementById('no-pending-msg').style.display = 'block';
+}
+
+function rejectReview(id) {
+    const pending = getPending();
+    const idx = pending.findIndex(r => r.id === id);
+    if (idx === -1) return;
+    pending.splice(idx, 1);
+    savePending(pending);
+    const el = document.getElementById('pending-' + id);
+    if (el) el.remove();
+    if (!pending.length) document.getElementById('no-pending-msg').style.display = 'block';
+}
+
+// ═══════════════════════════════════════════════
+//  ESTIMATE MODAL
+// ═══════════════════════════════════════════════
+const ESTIMATE_RATE_KEY = 'mm_last_estimate_ts';
+const ESTIMATE_RATE_MS  = 2 * 60 * 1000; // 2 min
+
+function openEstimateModal(e) {
+    if (e) e.preventDefault();
+    document.getElementById('estimate-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    resetEstimateForm();
+}
+
+function closeEstimateModal() {
+    document.getElementById('estimate-modal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('estimate-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeEstimateModal();
+});
+
+function resetEstimateForm() {
+    document.getElementById('estimate-form').reset();
+    document.querySelectorAll('#estimate-form .field-error-msg').forEach(m => m.classList.remove('show'));
+    document.querySelectorAll('#estimate-form input, #estimate-form textarea').forEach(f => f.classList.remove('error'));
+    document.getElementById('estimate-form-wrap').style.display = '';
+    document.getElementById('estimate-success').classList.remove('show');
+    document.getElementById('e-rate-msg').classList.remove('show');
+}
+
+document.getElementById('estimate-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (this.website2.value) return;
+
+    let valid = true;
+    const name  = document.getElementById('e-name').value.trim();
+    const phone = document.getElementById('e-phone').value.trim();
+
+    if (!name || name.length < 2) {
+        document.getElementById('e-name').classList.add('error');
+        document.getElementById('e-err-name').classList.add('show');
+        valid = false;
+    } else {
+        document.getElementById('e-name').classList.remove('error');
+        document.getElementById('e-err-name').classList.remove('show');
+    }
+
+    if (!phone || phone.length < 7) {
+        document.getElementById('e-phone').classList.add('error');
+        document.getElementById('e-err-phone').classList.add('show');
+        valid = false;
+    } else {
+        document.getElementById('e-phone').classList.remove('error');
+        document.getElementById('e-err-phone').classList.remove('show');
+    }
+
+    if (!valid) return;
+
+    const lastE = parseInt(localStorage.getItem(ESTIMATE_RATE_KEY) || '0');
+    if (Date.now() - lastE < ESTIMATE_RATE_MS) {
+        document.getElementById('e-rate-msg').classList.add('show');
+        return;
+    }
+    localStorage.setItem(ESTIMATE_RATE_KEY, Date.now().toString());
+
+    // Save estimate request to localStorage for reference
+    const req = {
+        id: 'est_' + Date.now(),
+        name,
+        phone,
+        type: document.getElementById('e-type').value,
+        area: document.getElementById('e-area').value,
+        desc: document.getElementById('e-desc').value,
+        date: new Date().toISOString()
+    };
+    const existing = JSON.parse(localStorage.getItem('mm_estimates') || '[]');
+    existing.push(req);
+    localStorage.setItem('mm_estimates', JSON.stringify(existing));
+
+    document.getElementById('estimate-form-wrap').style.display = 'none';
+    document.getElementById('estimate-success').classList.add('show');
+});
+
+// ── Init ──
+renderAllReviews();
 </script>
 
 </body>
